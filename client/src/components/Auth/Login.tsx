@@ -65,7 +65,7 @@ const Login = () => {
         email,
         password,
       });
-    
+    console.log(response.data)
       Cookies.set('accessToken', response.data.access_token);
       Cookies.set('userId', response.data.userId);
       navigate('/');

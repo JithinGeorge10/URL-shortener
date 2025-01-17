@@ -78,7 +78,7 @@ const UrlShortener: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
                 <input
-                  type="text" // Changed from "url" to "text"
+                  type="text" 
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                   placeholder="Enter your long URL here"
                   value={url}
