@@ -9,7 +9,6 @@ const UrlShortener: React.FC = () => {
   const [url, setUrl] = useState('');
   const [shortUrl, setShortUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [copied, setCopied] = useState(false);
 
   const isValidUrl = (input: string) => {
     const urlPattern = new RegExp(
@@ -60,12 +59,10 @@ const UrlShortener: React.FC = () => {
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shortUrl);
-    setCopied(true);
     toast.info('Copied to clipboard!', {
       position: 'top-right',
       autoClose: 2000,
     });
-    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
