@@ -13,7 +13,6 @@ const Login = () => {
   const [passwordError, setPasswordError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
   let userId = Cookies.get('userId');
   let accessToken = Cookies.get('accessToken');
@@ -58,7 +57,6 @@ const Login = () => {
     if (!validateInputs()) return;
 
     setIsLoading(true);
-    setErrorMessage('');
 
     try {
       const response = await axios.post(import.meta.env.VITE_API_LOGIN, {
@@ -72,10 +70,8 @@ const Login = () => {
       toast.success('Login successful!');
     } catch (error: any) { // Cast 'error' to 'any'
       if (error.response) {
-        setErrorMessage(error.response.data.message || 'Login failed. Please try again.');
         toast.error(error.response.data.message || 'Login failed. Please try again.');
       } else {
-        setErrorMessage('Something went wrong. Please try again later.');
         toast.error('Something went wrong. Please try again later.');
       }
     } finally {
