@@ -102,7 +102,7 @@ const UrlShortener: React.FC = () => {
 
             {shortUrl && (
               <div className="mt-6 p-4 bg-purple-50 rounded-lg">
-                <p className="text-sm font-medium text-purple-700 mb-2">Your shortened URL:</p>
+                <p className="text-sm font-medium text-purple-700 mb-2">Your Shortened URL:</p>
                 <div className="flex items-center space-x-2">
                   <a
                     href={shortUrl}
