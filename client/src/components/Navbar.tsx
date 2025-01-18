@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-700">
             <button className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-              Logout
+              Log out
             </button>
           </div>
         </div>
