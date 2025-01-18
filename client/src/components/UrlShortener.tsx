@@ -66,12 +66,12 @@ const UrlShortener: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-indigo-200">
+    <div className="min-h-screen bg-gradient-to-br  from-gray-100 to-gray-500 ">
       <Navbar />
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-6">
-            <h2 className="text-2xl font-bold text-center text-purple-700 mb-6">Shorten Your URL</h2>
+            <h2 className="text-2xl font-bold text-center text-black mb-6">Shorten Your URL</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
                 <input
@@ -85,7 +85,7 @@ const UrlShortener: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className={`w-full py-2 px-4 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors ${isLoading ? 'opacity-75 cursor-not-allowed' : ''
+                className={`w-full py-2 px-4 bg-black text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors ${isLoading ? 'opacity-75 cursor-not-allowed' : ''
                   }`}
                 disabled={isLoading}
               >
