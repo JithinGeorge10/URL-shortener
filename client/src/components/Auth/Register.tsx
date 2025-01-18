@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, Mail, Lock, User } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
@@ -66,56 +66,56 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br  from-gray-100 to-gray-500 p-4">
       <div className="w-full max-w-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="p-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">Create an account</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
 
             <div>
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
+ 
               <div className="relative">
                 <input
                   id="username"
                   type="text"
-                  placeholder="Your username"
+                  placeholder='Enter Username'
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="w-full px-4 py-2 h-12 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500"
                 />
-                <User className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
+           
               </div>
               {errors.username && <p className="text-sm text-red-600 mt-1">{errors.username}</p>}
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
               <div className="relative">
                 <input
                   id="email"
                   type="email"
-                  placeholder="name@example.com"
+       placeholder='Enter E-mail'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-2 h-12 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500"
                 />
-                <Mail className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
+             
               </div>
               {errors.email && <p className="text-sm text-red-600 mt-1">{errors.email}</p>}
             </div>
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+             
               <div className="relative">
                 <input
                   id="password"
                   type={showPassword ? 'text' : 'password'}
+                  placeholder='Enter Password'
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full px-4 py-2 h-12 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500"
                 />
-                <Lock className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
+             
                 <button
                   type="button"
                   className="absolute right-3 top-3.5"
@@ -129,16 +129,16 @@ const Register = () => {
 
             {/* Confirm Password Field */}
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirm Password</label>
               <div className="relative">
                 <input
                   id="confirmPassword"
+                    placeholder='Confirm Password'
                   type={showConfirmPassword ? 'text' : 'password'}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   className="w-full px-4 py-2 h-12 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500"
                 />
-                <Lock className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
+              
                 <button
                   type="button"
                   className="absolute right-3 top-3.5"

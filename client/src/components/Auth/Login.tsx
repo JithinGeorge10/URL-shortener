@@ -81,13 +81,13 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-500 p-4">
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
-      <div className="w-full max-w-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="w-full max-w-[400px] bg-gray-50 rounded-3xl shadow-lg overflow-hidden">
         <div className="p-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">Welcome back</h2>
-            <p className="text-gray-600">Enter your credentials to access your account</p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">Login</h2>
+            <p className="text-gray-500 font-bold">Enter your credentials to access your account</p>
           </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
